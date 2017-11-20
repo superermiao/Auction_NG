@@ -9,6 +9,12 @@ import { StarsComponent } from './common/stars/stars.component';
 import { SearchComponent } from './common/search/search.component';
 import { ProductComponent } from './common/product/product.component';
 import {AppRoutingModule} from './app-routing.modules';
+import { ProductDeatailComponent } from './common/product-deatail/product-deatail.component';
+import { HomeComponent } from './common/home/home.component';
+import {ProductService} from './common/shared/product.service';
+import { PageListComponent } from './common/page-list/page-list.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,14 +24,19 @@ import {AppRoutingModule} from './app-routing.modules';
     FooterComponent,
     SliderComponent,
     StarsComponent,
-    SearchComponent
+    SearchComponent,
+    ProductDeatailComponent,
+    HomeComponent,
+    PageListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     NgZorroAntdModule.forRoot(),
     AppRoutingModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
