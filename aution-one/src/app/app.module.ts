@@ -13,8 +13,10 @@ import { ProductDeatailComponent } from './common/product-deatail/product-deatai
 import { HomeComponent } from './common/home/home.component';
 import {ProductService} from './common/shared/product.service';
 import { PageListComponent } from './common/page-list/page-list.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FilterPipe } from './pipe/filter.pipe';
+import { StockComponent } from './stock/stock.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,15 @@ import { FilterPipe } from './pipe/filter.pipe';
     ProductDeatailComponent,
     HomeComponent,
     PageListComponent,
-    FilterPipe
+    FilterPipe,
+    StockComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     NgZorroAntdModule.forRoot(),
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
   ],
   providers: [ProductService],
