@@ -17,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FilterPipe } from './pipe/filter.pipe';
 import { StockComponent } from './stock/stock.component';
 import { OrderComponent } from './order/order.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { OrderComponent } from './order/order.component';
     PageListComponent,
     FilterPipe,
     StockComponent,
-    OrderComponent
+    OrderComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
