@@ -17,9 +17,17 @@ export class ProductComponent implements OnInit {
       value => this.keyword = value
     );
   }
-
+  public  pageAllData =  this.ProductService.getProducts().length; /*总数据数*/
+  public pageSize = 6; /*每页显示数据条数*/
+  public pageOneData = this.pageSize; /*每页显示数据*/
+  public allPage = Math.ceil(this.pageAllData / this.pageSize); /*总页数*/
+  public curPage = 1; /*当前页码*/
   ngOnInit() {
     this.products = this.ProductService.getProducts();
+  }
+  getPageData(event) {
+    this.curPage = event;
+    this.pageSize = this.pageOneData * event;
   }
 }
 
