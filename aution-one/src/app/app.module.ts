@@ -15,9 +15,7 @@ import {ProductService} from './common/shared/product.service';
 import { PageListComponent } from './common/product/page-list/page-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FilterPipe } from './pipe/filter.pipe';
-import { StockComponent } from './stock/stock.component';
-import { OrderComponent } from './order/order.component';
-import { FormComponent } from './form/form.component';
+
 
 @NgModule({
   declarations: [
@@ -32,9 +30,6 @@ import { FormComponent } from './form/form.component';
     HomeComponent,
     PageListComponent,
     FilterPipe,
-    StockComponent,
-    OrderComponent,
-    FormComponent
   ],
   imports: [
     BrowserModule,
