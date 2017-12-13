@@ -1,4 +1,12 @@
-.carousel-container{
-  margin-bottom: 30px;
-  margin-top: 30px;
+:host ::ng-deep .ant-carousel .slick-slide {
+  text-align: center;
+  height: 320px;
+  line-height: 320px;
+  background: #364d79;
+  color: #fff;
+  overflow: hidden;
+}
+
+h3 {
+  color: #fff;
 }

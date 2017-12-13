@@ -9,7 +9,11 @@ export class SliderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  array = [1, 2, 3];
 
+  ngOnInit() {
+    setTimeout(_ => {
+      this.array = [1, 2, 3, 4];
+    }, 500);
+  }
 }
